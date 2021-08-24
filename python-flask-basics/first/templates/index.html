@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<title>hello</title>
+	</head>
+	<body>
+		<h1 style="color: red">Hello</h1>
+		<h2 style="color: yellow">{{content}}</h2>
+		<h2 style="color: yellow">{{r}}</h2>
+		{% for i in content %}
+			{% if i == 'sai' %}
+				<p>{{i}}</p>
+			{% endif %}
+		{% endfor %}
+
+	</body>
+</html>

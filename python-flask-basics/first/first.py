@@ -1,0 +1,19 @@
+from flask import Flask ,redirect, url_for
+import second 
+
+app = Flask(__name__)
+
+@app.route('/')
+def home() :
+	return "hello ! this is my first main page <h1>Hello</h1>"
+
+@app.route('/<name>')
+def user(name) :
+	return f'Hello {name}!'
+
+@app.route('/admin')
+def admin() :
+	return redirect(url_for('user',name='Admin!!'))
+
+if __name__ == '__main__':
+	app.run()
